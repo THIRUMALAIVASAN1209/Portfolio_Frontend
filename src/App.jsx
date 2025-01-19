@@ -29,7 +29,10 @@ function App() {
               <li><a href="#"><button>Services</button></a></li>
               <li><a href="#"><button>Portfolio</button></a></li>
               <li><a href="#"><button>Contact</button></a></li>
-              <a href="/images/cv.pdf" download className='btn2' style={{marginLeft:"10%"}}><button >Download CV</button></a>
+              <a href="/images/cv.pdf" download="cv.pdf" className="btn2" style={{ marginLeft: "10%" }}>
+              <button>Download CV</button>
+              </a>
+
             </ul>
           </nav>
           

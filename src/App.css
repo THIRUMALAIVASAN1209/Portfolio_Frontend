@@ -186,7 +186,7 @@ button:active{
 }
 
 .portfolio{
-  padding: 30px 5%;
+  padding: 5% 5%;
   background: linear-gradient(rgba(18, 1, 56, 0.54),black);
 }
 
@@ -234,7 +234,7 @@ button:active{
 
 .contact{
   padding-left: 5%;
-  margin-top: 80px;
+  padding-top: 5%;
   background: linear-gradient(rgb(0, 0, 0),rgb(8,11,49));
   padding-bottom: 5%;
 }
@@ -370,6 +370,14 @@ footer{
   
   .portfolio h1{
     margin-left: 25%;
+  }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+  nav{
+    display: none;
   }
 
 }
