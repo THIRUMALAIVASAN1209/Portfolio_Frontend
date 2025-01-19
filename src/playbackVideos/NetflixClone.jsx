@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import netflix_video from '../videos/Netflix.mp4';
+import netflix_video from '../videos/netflix.mp4';
 import netflix from '../images/netflix.jpg';
 import playIcon from '../images/playButton.webp';
 import './VideoStyle.css';
