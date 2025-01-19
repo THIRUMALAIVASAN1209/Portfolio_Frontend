@@ -1,6 +1,11 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 import images from './images/newPP.png'
+
+import Close from './images/close.png'
+import Menu from './images/menu.png'
+
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 // ---------About-------------
 import Skills from './About/Skills';
@@ -10,35 +15,57 @@ import Achievements from './About/Achievements';
 import NetflixClone from './playbackVideos/NetflixClone.jsx';
 import YoutubeClone from './playbackVideos/YoutubeClone.jsx';
 import Game from './playbackVideos/Game.jsx';
-
 import Form_user from './Form_user.jsx';
+import Resume from './images/Resume.pdf';
 
 
 
 function App() {
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const openmenu = () => setIsMenuOpen(true);
+  const closemenu = () => setIsMenuOpen(false);
 
   return (
     <>
       <div className="my-font-class">
       {/* <div className='container'> */}
+          <div id='home'>
           <nav>
-            <ul>
-              <li><a href="#"><button>Home</button></a></li>
-              <li><a href="#"><button>About</button></a></li>
-              <li><a href="#"><button>Services</button></a></li>
-              <li><a href="#"><button>Portfolio</button></a></li>
-              <li><a href="#"><button>Contact</button></a></li>
-              <a href="/images/cv.pdf" download="cv.pdf" className="btn2" style={{ marginLeft: "10%" }}>
-              <button>Download CV</button>
+            <ul id='sidemenu' style={{
+                right: isMenuOpen ? "0" : "-200px",
+                transition: "0.3s ease",
+              }} >
+              <li><a href="#home"><button>Home</button></a></li>
+              <li><a href="#about"><button>About</button></a></li>
+              <li><a href="#services"><button>Services</button></a></li>
+              <li><a href="#projects"><button>Projects</button></a></li>
+              <li><a href="#contact"><button>Contact</button></a></li>
+              <a className='download1 btn2' href={Resume} download>
+              <button className='download2'>Download CV</button>
               </a>
-
+              <img src={Close} onClick={closemenu} className='close'alt="" />
             </ul>
+            <img src={Menu} onClick={openmenu} className='menu' alt="" />
           </nav>
+          </div>
           
         {/* </div> */}
-        <p className='intro' style={{fontSize:"xx-large",marginLeft:"15%",marginTop:"150px"}}>Hi, I'm <span className='name'>T</span>hirumalaivasan</p>
-        <p style={{fontSize:"x-large",marginLeft:"19%",marginTop:"-1%"}}><span className='name'>F</span>ull Stack Developer</p>
+        <p className='intro'>Hi, I'm <span className='name'>T</span>hirumalaivasan</p>
+        <p className='intro2'><span className='name'>F</span>ull Stack Developer</p>
     </div>
 
       {/* ---------------ABOUT ME------------------------- */}
@@ -83,7 +110,7 @@ function App() {
 
     {/* ---------------------Services---------------------- */}
 
-    <div className="services my-font-class">
+    <div className="services my-font-class" id='services'>
       <div className="container">
         <h1 className="sub-title">My Services</h1>
         <div className="services-list">
@@ -113,7 +140,7 @@ function App() {
 
       {/* --------------My work------------------ */}
 
-    <div className='my-font-class portfolio'>
+    <div className='my-font-class portfolio' id='projects'>
       <div className='container'>
         <h1 className='sub-tittle'>My Work</h1>
         <div className="work-list">
@@ -183,11 +210,11 @@ function App() {
 
     {/* -----------contact----------- */}
 
-    <div className="contact my-font-class">
+    <div className="contact my-font-class" id='contact'>
       <div className="container">
         <div className="row">
           <div className="contact-left">
-            <h1 className="sub-title">Contact Me</h1>
+            <h1 className="contact-title">Contact Me</h1>
             <table>
               <tbody>
               <tr>               
@@ -199,9 +226,8 @@ function App() {
             <table>
               <tbody>
               <tr>
-                <td><img className='phone' style={{height:"25px",marginLeft:"5px",marginBottom:"-5px"}} src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="" /></td>
+                <td><img className='phone'  src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="" /></td>
                 <td><p>+91-8668125089</p></td>
-                <td><img style={{height:"30px",marginBottom:"-8px"}} src="https://static-00.iconduck.com/assets.00/whatsapp-icon-2040x2048-8b5th74o.png" alt="" /></td>
               </tr>
               </tbody>
             </table>

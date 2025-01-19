@@ -7,6 +7,11 @@
   font-family: 'MyCustomFont', sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+
 body{
   margin: 0px;
   color: azure;
@@ -80,12 +85,31 @@ button:active{
   transform: scale(1);
 }
 
+.download1{
+  margin-left: 5%;
+}
+.download2{
+  background-color: rgb(238, 205, 16);
+}
 
 .row{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   
+}
+
+.intro{
+  font-size: 50PX;
+  margin-left: 15%;
+  margin-top: 150px;
+  padding-top: 5%;
+}
+
+.intro2{
+  font-size: x-large;
+  margin-left: 25%;
+  margin-top: -2%;
 }
 
 /* .about-col-1{
@@ -108,11 +132,12 @@ button:active{
 
 
 #about{
-  margin-top: 53%;
+  margin-top: 40%;
   padding: 4%;
+  padding-top: 10%;
   background:linear-gradient(black,rgb(32, 2, 2));
+  
 }
-
 
 
 .tab-titles{
@@ -287,6 +312,12 @@ form input,form textarea{
   border-radius: 6px;
 }
 
+.phone{
+  height: 25px;
+  margin-left: 5px;
+  margin-bottom: -5px;
+}
+
 footer{
   background-color: rgb(50, 50, 50);
   padding-left: 48%;
@@ -298,14 +329,89 @@ footer{
   font-size: 13px;
 }
 
+nav img {
+  display: none;
+}
+
 
 @media only screen and (max-width: 600px) {
+
+  .intro{
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+  nav img{
+    display: block;
+    height: 35px;
+  }
+
   nav{
-    display: none;
+    padding-left: 85%;
+    padding-bottom: -30%;
+    margin-top: -35%;
+    position: fixed;
+  }
+
+  nav ul{
+    background-color: rgb(8,11,49);
+    position: fixed;
+    top: -2.5%;
+    right: -41%;
+    width: 30%;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+  }
+
+  nav ul li button{
+    display: block;
+    margin: 15px;
+    margin-left: -30%;
+    padding: 5px 20px;
+    font-size: 15px; 
+    color: white;
+    background: none;
+    text-decoration: underline rgb(8,11,49);
+  }
+
+  .download2{
+    padding: 5px 10px;
+    font-size: 15px;
+    
+  }
+
+  .download1{
+    margin-left: -20%;
+    margin-top: 20%;
+  }
+  
+  nav{
+    background-color: transparent;
+  }
+
+  nav ul li{
+    margin-right: 20%;
+  }
+
+  nav ul img{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    height: 25px;
+  }
+
+  .intro2{
+    font-size: 18px;
+    margin-left: 8%;
+    margin-top: -4%;
+    padding-bottom: 50%;
   }
 
   #about{
     font-size: smaller;
+    padding-top: 20%;
   }
 
   .row .about-col-2 p{
@@ -374,17 +480,18 @@ footer{
   }
   
   .portfolio h1{
-    margin-left: 25%;
+    margin-left: 28%;
   }
 
-  
+  .contact-title{
+    padding-left: 22%;
+  }
 
+  .phone{
+    margin-bottom: -35%;
+  }
 }
 
 
-@media only screen and (max-width: 1200px) {
-  nav{
-    display: none;
-  }
 
-}
+
