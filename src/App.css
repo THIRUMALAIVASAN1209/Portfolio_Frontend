@@ -400,6 +400,11 @@ nav img {
     left: 15px;
     cursor: pointer;
     height: 25px;
+    
+  }
+
+  nav img{
+    border-radius: 5px;
   }
 
   .intro2{

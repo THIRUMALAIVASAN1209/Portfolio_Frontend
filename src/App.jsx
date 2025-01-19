@@ -25,8 +25,8 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen size
-  useEffect(() => {
+  
+  useEffect(() => {      // Detects screen size
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 600);
     };
@@ -49,12 +49,12 @@ function App() {
                 right: isMenuOpen ? "0" : "-200px",
                 transition: "0.3s ease",
               }} >
-              <li><a href="#home"><button>Home</button></a></li>
-              <li><a href="#about"><button>About</button></a></li>
-              <li><a href="#services"><button>Services</button></a></li>
-              <li><a href="#projects"><button>Projects</button></a></li>
-              <li><a href="#contact"><button>Contact</button></a></li>
-              <a className='download1 btn2' href={Resume} download>
+              <li><a href="#home"><button onClick={closemenu}>Home</button></a></li>
+              <li><a href="#about"><button onClick={closemenu}>About</button></a></li>
+              <li><a href="#services"><button onClick={closemenu}>Services</button></a></li>
+              <li><a href="#projects"><button onClick={closemenu}>Projects</button></a></li>
+              <li><a href="#contact"><button onClick={closemenu}>Contact</button></a></li>
+              <a className='download1 btn2' href={Resume} download onClick={closemenu}>
               <button className='download2'>Download CV</button>
               </a>
               <img src={Close} onClick={closemenu} className='close'alt="" />
