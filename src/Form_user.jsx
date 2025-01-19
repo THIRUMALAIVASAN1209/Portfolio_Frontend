@@ -15,7 +15,7 @@ const FormUser = () => {
     const userData = { name, email, feedback };
 
     try {
-      const response = await axios.post('http://localhost:3000/users/create', userData);
+      const response = await axios.post('https://portfolio-backend-b7s2.onrender.com/users/create', userData);
       setSuccess(response.data.message);
       setError(''); // Clear any previous error messages
     } catch (error) {

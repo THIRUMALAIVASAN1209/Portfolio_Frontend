@@ -51,7 +51,7 @@ function App() {
             </div>
             <div className="about-col-2">
               <h1 className='about-title' style={{fontSize:"x-large"}}>About Me</h1>
-              <p className='description' style={{width:"80%"}}>Welcome to my portfolio! I am Thirumalaivasan N, an aspiring Mechatronics Engineer. This website is designed to showcase my skills, projects, and achievements. With hands-on experience in programming, web development, and engineering projects, I have developed a strong foundation in both technical and creative domains. Explore my portfolio to learn more about my journey, accomplishments, and how I aim to contribute meaningfully to the field of engineering and technology.</p>
+              <p className='description' style={{width:"100%"}}>Welcome to my portfolio! I am Thirumalaivasan N, an aspiring Mechatronics Engineer. This website is designed to showcase my skills, projects, and achievements. With hands-on experience in programming, web development, and engineering projects, I have developed a strong foundation in both technical and creative domains. Explore my portfolio to learn more about my journey, accomplishments, and how I aim to contribute meaningfully to the field of engineering and technology.</p>
 
           <Router>
             <div className="tab-titles">
@@ -199,7 +199,7 @@ function App() {
             <table>
               <tbody>
               <tr>
-                <td><img style={{height:"25px",marginLeft:"5px",marginBottom:"-5px"}} src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="" /></td>
+                <td><img className='phone' style={{height:"25px",marginLeft:"5px",marginBottom:"-5px"}} src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="" /></td>
                 <td><p>+91-8668125089</p></td>
                 <td><img style={{height:"30px",marginBottom:"-8px"}} src="https://static-00.iconduck.com/assets.00/whatsapp-icon-2040x2048-8b5th74o.png" alt="" /></td>
               </tr>

@@ -344,20 +344,25 @@ footer{
   }
 
   .contact-right input,.contact-right textarea{
-    width: 120%;
+    width: 240%;
   }
 
   .contact-right button{
-    margin-left: 35%;
+    margin-left: 90%;
   }
 
   .about-col-2{
     width: 100%;
-  
+    
   }
 
   .description{
-    margin-left: 4%;
+    margin-left: 2%;
+    
+  }
+
+  .tab-links{
+    padding-left: 3%;
   }
 
   .about-title{
@@ -371,6 +376,8 @@ footer{
   .portfolio h1{
     margin-left: 25%;
   }
+
+  
 
 }
 
